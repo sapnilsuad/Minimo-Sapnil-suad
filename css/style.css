@@ -1,128 +1,95 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-body{
-    background: #FFFFFF; 
-}
-.container{
-    width: 1140px;
-    margin: auto;
-}
-.navbar{
-    width: 100%;
-    padding: 4rem 0 5rem;
-}
-.logo{
-    width: 30%;
-    float: left; 
-    cursor: pointer;
-}
-.menu{
-    width: 70%;
-    float: right;
-    text-align: right;
-}
-.menu ul{
-    list-style: none;
-}
-.menu ul li{
-    display: inline-block;
-    cursor: pointer;
-}
-.menu ul li a{
-    text-decoration: none;
-    color: #626262;
-    margin-left: 5rem;
+.nav-link{     
+    color: #626262 !important;
     font-size: 16px;
     text-transform: uppercase;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif; 
+    margin-left: 3rem;
 }
-.menu ul li a:hover{
-    color: #000;
+.nav-link:hover{
+    color: #000 !important;
     transition: ease-in-out .3s;
-} 
-.mainpost{
-    width: 100%;
-    display: flow-root;
 }
-.mainpost img{
-    width: 100%;
-} 
-.details{
-    padding: 70px;
+.img-fluid{
+    margin-top: 50px;
 }
-.details h1{
+.nav-link::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    display: block;
+    margin: auto;
+    background: #626262;
+}
+.nav-link:hover::after{
+    width: 100%;
+    transition: all .4s;
+}
+.col-md-6{ 
+    text-align: center;
+}
+.col-md-6 h1,
+.col-md-6 h4, 
+.col-md-6 p{
+    text-align: left;
+}
+.col-md-6 h1{
     color: #626262;
     margin-bottom: 30px;
     font-size: 32px;
     font-family: 'Playfair Display', serif;
 }
-.details h3{
-    text-transform: uppercase;
-    color: #626262; 
-    font-size: 14px;
-    margin-bottom: 30px;
-    font-family: 'Ubuntu', sans-serif;
-}
-.details p{
-    color: #626262;
-    line-height: initial;
-    font-family: 'Playfair Display', serif;
-}
-.details h2{
-    text-transform: uppercase;
-    color: #626262; 
-    font-size: 14px;
-    margin-top: 50px;
-    font-family: 'Ubuntu', sans-serif;
-}
-.post-container{
-    width: 100%;
-    display: flow-root;
-}
-.single-post{
-    padding-top: 70px; 
-    padding-left: 70px;
-} 
-.left-post{
-    width: 48%;
-    float: left;
-    margin-bottom: 8rem;
-}
-.right-post{
-    width: 48%; 
-    float: right; 
-    margin-bottom: 8rem;
-}
-.single-post img{
-    width: 92%;
-}
-.desc h4{
+.col-md-6 h4{
     text-transform: uppercase;
     color: #626262; 
     font-size: 14px;
     margin: 30px 0;
     font-family: 'Playfair Display', serif;
 }
-.desc h1{
+.col-md-6 p{
+    color: #626262;
+    line-height: initial;
+    font-family: 'Playfair Display', serif;
+}
+
+section{ 
+    padding: 60px 80px;
+}
+.perfect h3{  
+    text-transform: uppercase;
+    color: #626262; 
+    font-size: 14px;
+    margin-bottom: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.perfect h2{ 
+    text-transform: uppercase;
+    color: #626262; 
+    font-size: 14px;
+    margin-top: 50px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.perfect h1{ 
     color: #626262;
     margin-bottom: 30px;
     font-size: 32px;
     font-family: 'Playfair Display', serif;
 }
-.desc p{
+.perfect p{ 
     color: #626262;
     line-height: initial;
     font-family: 'Playfair Display', serif;
 }
 .newsletter{
-    width: 100%;
+    text-align: center;
     background: #F0F0F0;
-    display: flow-root;
 }
 .email{
-    padding: 70px 350px; 
+    padding: 70px 0;  
 }
 .email h1{
     color: #626262;
@@ -132,8 +99,8 @@ body{
     text-align: center; 
     font-family: 'Playfair Display', serif;
 }
-.email input{
-    width: 100%;
+.email input{ 
+    width: 40%; 
     border: none;
     border-bottom: 1px solid #000;
     padding: 1rem;
@@ -145,70 +112,146 @@ body{
     outline: none;
 }
 .btn{
+    text-align: center;
+}
+.btn-success{
     padding: 15px 40px;
-    margin-left: 44%;
     font-size: 18px;
     border: 1px solid #626262;
     background: transparent;
-    margin-bottom: 30rem;
     color: #626262;
     cursor: pointer;
     font-family: 'Playfair Display', serif;
+    border-radius: 0; 
+    margin-bottom: 150px; 
 }
-.btn:hover{
-    color: #000;
+.btn-success:hover{
+    font-size: 18px;
     border: 1px solid #000;
-    transition: ease-in-out .3s;
-}
-.btn:focus{
-    outline: none;
+    background: transparent;
+    color: #000;
 }
 footer{
-    display: flow-root;
-    background: #F0F0F0;
+    background: #F0F0F0;  
     width: 100%;
+    padding: 30px 20px 10px;
 }
-.left{
-    width: 40%;
-    float: left;
-}
-.right{
-    width: 60%;
-    float: right;
-    text-align: right;
-}
-.left ul, 
-.right ul{
+footer ul li{
     list-style: none;
-    padding: 2.5rem;
-}
-.left ul li{
     display: inline-block;
-    padding: 0 2rem;
+    padding: 0 10px;
 }
-.left ul li a{
+footer ul li a{
     color: #000;
     text-decoration: none;
-    font-size: 16px; 
-    font-family: 'Playfair Display', serif;
+    font-size: 16px;  
+    font-family: 'Playfair Display', serif;  
 }
-.left ul li a:hover{
-    color: #000;
-}
-.right ul li a:hover{
-    color: #000;
-}
-.right ul li{
-    display: inline-block;
-    padding: 0 1rem;  
-}
-.right ul li a{
-    color: #000;
-    text-decoration: none;
-    font-size: 16px; 
-    font-family: 'Playfair Display', serif;
+footer .follow{
+    text-align: right; 
 }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+/* Responsive Code */
+
+
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape) 
+    ##Screen = B/w 481px to 767px
+  */
+   
+  @media (min-width: 481px) and (max-width: 800px) {
+    section{
+        padding: 25px 8px;
+    }
+    footer .follow{
+        text-align: center;
+    }
+    ol, ul {
+        padding-left: 2rem;
+    }
+    .email input{ 
+        width: 80%; 
+    }
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    section{
+        padding: 25px 8px;
+    }
+    ol, ul {
+        padding-left: 2rem;
+    }
+    footer .follow{
+        text-align: center;
+    }
+    .col-md-6 h1{
+        margin-bottom: 10px;
+        font-size: 22px;
+        text-align: center;
+    }
+    .col-md-6 h4{
+        font-size: 14px;
+        margin: 10px 0; 
+        text-align: center;
+
+    }
+    .col-md-6 p{
+       font-size: 12px;
+       text-align: center;
+
+    }
+    .email h1{
+        margin-bottom: 30px; 
+        margin-top: 10px;
+        font-size: 22px;
+    }
+    .perfect h1{      
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+    .perfect p{ 
+        font-size: 14px;
+    }
+    .email{
+        padding: 30px 0;  
+    }
+    .email input{ 
+        width: 100%; 
+        font-size: 14px;
+    }
+    
+  }
+
+  @media (min-width: 100px) and (max-width: 319px) {
+    
+    section{
+        padding: 25px 8px;
+    }
+    ol, ul {
+        padding-left: 2rem;
+    }
+    footer .follow{
+        text-align: center;
+    }
+    
+  }
